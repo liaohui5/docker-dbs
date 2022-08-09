@@ -2,6 +2,12 @@ version: "3"
 
 networks:
   default:
+    driver: bridge
+    ipam:
+      driver: default
+      # 解除下面的注释可以设置网段，用于nginx等容器固定容器IP
+      #config:
+      #  - subnet: 10.0.0.0/24
 
 services:
   # docs: https://hub.docker.com/r/mysql/mysql-server
@@ -71,7 +77,4 @@ services:
       - "${MONGODB_HOST_PORT}:27017"
     networks:
       - default
-    command:
-      --auth
-
-
+    command: --auth
