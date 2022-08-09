@@ -18,24 +18,22 @@ git clone https://github.com/liaohui5/docker-dbs
 
 cd docker-dbs
 
-# 在 .env 文件中设置密码之类的信息
+mkdir datas logs
+
 cp example.env .env
 
-# 在 docker-compose.yaml 同级目录下执行
 docker-compose up -d
 ```
 
 ## 停止
 
 ```bash
-# 在 docker-compose.yaml 同级目录下执行
 docker-compose down
 ```
 
-## 查看容器是否正常运行正常
+## 查看是否正常运行
 
 ```bash
-# 在 docker-compose.yaml 同级目录下执行
 docker-compose ps
 ```
 
